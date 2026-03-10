@@ -65,9 +65,17 @@ export async function resetWelcome(guildId: string): Promise<void> {
 // GUILD CONFIG (language)
 // ==========================================
 
+const langCache = new Map<string, { value: string; expires: number }>();
+const LANG_CACHE_TTL = 5 * 60 * 1000; // 5 minutes
+
 export async function getGuildLanguage(guildId: string): Promise<string> {
+  const cached = langCache.get(guildId);
+  if (cached && cached.expires > Date.now()) return cached.value;
+
   const config = await GuildConfig.findOne({ guildId });
-  return config?.language || 'es';
+  const lang = config?.language || 'es';
+  langCache.set(guildId, { value: lang, expires: Date.now() + LANG_CACHE_TTL });
+  return lang;
 }
 
 export async function setGuildLanguage(guildId: string, language: string): Promise<void> {
@@ -76,4 +84,5 @@ export async function setGuildLanguage(guildId: string, language: string): Promi
     { $set: { language }, $setOnInsert: { guildId } },
     { upsert: true },
   );
+  langCache.set(guildId, { value: language, expires: Date.now() + LANG_CACHE_TTL });
 }
