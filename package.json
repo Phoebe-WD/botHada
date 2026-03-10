@@ -16,6 +16,9 @@
     "dotenv": "^17.3.1",
     "mongoose": "^9.2.4"
   },
+  "engines": {
+    "node": ">=24.0.0"
+  },
   "devDependencies": {
     "@types/node": "^25.4.0",
     "ts-node": "^10.9.2",
