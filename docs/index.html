@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BotHada — Discord Server Configuration Bot</title>
+  <link rel="stylesheet" href="legal/style.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/4a7cd294ab.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="logo">BotHada</a>
+      <div class="nav-links">
+        <a href="legal/terms-of-service.html">Terms of Service</a>
+        <a href="legal/privacy-policy.html">Privacy Policy</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <span class="hero-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+    <h1>BotHada</h1>
+    <p>A Discord bot for server configuration — reaction roles, welcome system, and per-server language support.</p>
+  </div>
+
+  <div class="features">
+    <div class="feature-card">
+      <span class="icon"><i class="fa-solid fa-masks-theater"></i></span>
+      <h3>Reaction Roles</h3>
+      <p>Let members pick their own roles by reacting to a panel with emojis.</p>
+    </div>
+    <div class="feature-card">
+      <span class="icon"><i class="fa-solid fa-hand-sparkles"></i></span>
+      <h3>Welcome System</h3>
+      <p>Greet new members with custom messages, banners, and embed colors.</p>
+    </div>
+    <div class="feature-card">
+      <span class="icon"><i class="fa-solid fa-language"></i></span>
+      <h3>Multi-language</h3>
+      <p>Switch between Spanish and English on a per-server basis.</p>
+    </div>
+  </div>
+
+  <div class="commands-section">
+    <h2>Commands</h2>
+    <p class="commands-note">All commands require <strong>Administrator</strong> permissions. Prefix: <code>!</code></p>
+
+    <div class="command-group">
+      <h3>Roles</h3>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr><th>Command</th><th>Description</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><code>!setup</code></td><td>Create predefined roles and voice channels</td></tr>
+            <tr><td><code>!link &lt;emoji&gt; &lt;@role&gt;</code></td><td>Link an emoji to a role for the reaction panel</td></tr>
+            <tr><td><code>!unlink &lt;emoji&gt;</code></td><td>Remove an emoji-role link</td></tr>
+            <tr><td><code>!panel</code></td><td>Generate the reaction role selection panel</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="command-group">
+      <h3>Welcome</h3>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr><th>Command</th><th>Description</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><code>!welcome channel &lt;#channel&gt;</code></td><td>Set the welcome channel</td></tr>
+            <tr><td><code>!welcome message &lt;text&gt;</code></td><td>Set welcome message (<code>{user}</code> to mention)</td></tr>
+            <tr><td><code>!welcome image &lt;URL&gt;</code></td><td>Set welcome banner image</td></tr>
+            <tr><td><code>!welcome color &lt;#HEX&gt;</code></td><td>Set welcome embed color</td></tr>
+            <tr><td><code>!welcome view</code></td><td>Show current welcome configuration</td></tr>
+            <tr><td><code>!welcome test</code></td><td>Simulate a new member entry</td></tr>
+            <tr><td><code>!welcome reset</code></td><td>Clear all welcome configuration</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="command-group">
+      <h3>General</h3>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr><th>Command</th><th>Description</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><code>!language &lt;es/en&gt;</code></td><td>Change bot language per server</td></tr>
+            <tr><td><code>!help</code></td><td>Show the help panel</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="links-section">
+    <h2>Legal</h2>
+    <div class="link-cards">
+      <a href="legal/terms-of-service.html" class="link-card">
+        <span class="link-icon"><i class="fa-solid fa-file-contract"></i></span>
+        <span>Terms of Service</span>
+      </a>
+      <a href="legal/privacy-policy.html" class="link-card">
+        <span class="link-icon"><i class="fa-solid fa-shield-halved"></i></span>
+        <span>Privacy Policy</span>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <p>BotHada &mdash; Discord Server Configuration Bot</p>
+  </footer>
+</body>
+</html>
