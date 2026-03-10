@@ -44,7 +44,7 @@ const eventFiles = fs.readdirSync(path.join(__dirname, 'events')).filter((f) => 
 for (const file of eventFiles) {
   const mod = require(path.join(__dirname, 'events', file));
   const event: BotEvent = mod.default || mod;
-  client.on(event.name, (...args: unknown[]) => event.execute(...args));
+  client.on(event.name, (...args: unknown[]) => event.execute(...args).catch(console.error));
 }
 
 // ==========================================

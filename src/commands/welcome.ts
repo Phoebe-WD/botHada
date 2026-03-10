@@ -46,7 +46,8 @@ const subcommands: Record<string, SubcommandFn> = {
   async test(message, args, config, client, gid) {
     if (!config.channel) return message.reply(await t(gid, 'welcome.test_no_channel'));
 
-    client.emit('guildMemberAdd', message.member!);
+    if (!message.member) return message.reply(await t(gid, 'common.error'));
+    client.emit('guildMemberAdd', message.member);
     return message.reply(await t(gid, 'welcome.test_success'));
   },
 
