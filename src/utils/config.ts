@@ -24,7 +24,7 @@ export async function findRoleByEmoji(guildId: string, emoji: string): Promise<s
 export async function saveRole(guildId: string, emoji: string, roleId: string): Promise<void> {
   await RoleBinding.findOneAndUpdate(
     { guildId, emoji },
-    { roleId },
+    { $set: { roleId }, $setOnInsert: { guildId, emoji } },
     { upsert: true },
   );
 }
@@ -52,7 +52,7 @@ export async function loadWelcome(guildId: string): Promise<WelcomeData> {
 export async function saveWelcome(guildId: string, data: WelcomeData): Promise<void> {
   await WelcomeConfig.findOneAndUpdate(
     { guildId },
-    { ...data },
+    { $set: data, $setOnInsert: { guildId } },
     { upsert: true },
   );
 }
@@ -73,7 +73,7 @@ export async function getGuildLanguage(guildId: string): Promise<string> {
 export async function setGuildLanguage(guildId: string, language: string): Promise<void> {
   await GuildConfig.findOneAndUpdate(
     { guildId },
-    { language },
+    { $set: { language }, $setOnInsert: { guildId } },
     { upsert: true },
   );
 }
