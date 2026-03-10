@@ -70,7 +70,7 @@ client.on('messageCreate', async (message) => {
   }
 });
 
-client.once('ready', () => {
+client.once('clientReady', () => {
   console.log(`Bot ${client.user!.tag} is online.`);
   console.log(`Commands loaded: ${commands.size}`);
 });

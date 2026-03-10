@@ -12,17 +12,19 @@ const event: BotEvent = {
     if (reaction.partial) await reaction.fetch();
     if (reaction.message.partial) await reaction.message.fetch();
 
-    const guildId = reaction.message.guild?.id;
-    if (!guildId) return;
+    const guild = reaction.message.guild;
+    if (!guild) return;
 
     const emoji = reaction.emoji.toString();
-    const roleId = await findRoleByEmoji(guildId, emoji);
+    const roleId = await findRoleByEmoji(guild.id, emoji);
 
     if (!roleId) return;
 
-    const member = reaction.message.guild?.members.cache.get(user.id);
-    if (member) {
-      await member.roles.add(roleId).catch(console.error);
+    try {
+      const member = await guild.members.fetch(user.id);
+      await member.roles.add(roleId);
+    } catch (error) {
+      console.error('Failed to add reaction role:', error);
     }
   },
 };
