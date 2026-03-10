@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — BotHada</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <span class="logo">BotHada</span>
+      <div class="nav-links">
+        <a href="terms-of-service.html">Terms of Service</a>
+        <a href="privacy-policy.html" class="active">Privacy Policy</a>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: March 10, 2026</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>1. Introduction</h2>
+      <p>This Privacy Policy explains what data the bot <strong>BotHada</strong> ("the Bot") collects, how it is used, and how it is stored. Your privacy is important to us, and the Bot is designed to collect only the minimum data necessary for its functionality.</p>
+    </section>
+
+    <section>
+      <h2>2. Data We Collect</h2>
+      <p>The Bot stores the following data, all of which is server configuration set by administrators:</p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Data</th>
+              <th>Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Server (Guild) ID</td>
+              <td>Identify which server the configuration belongs to</td>
+            </tr>
+            <tr>
+              <td>Channel IDs</td>
+              <td>Know where to send welcome messages</td>
+            </tr>
+            <tr>
+              <td>Role IDs</td>
+              <td>Assign roles via reactions</td>
+            </tr>
+            <tr>
+              <td>Emoji-to-role mappings</td>
+              <td>Link emojis to roles for the reaction system</td>
+            </tr>
+            <tr>
+              <td>Welcome message settings</td>
+              <td>Text, image URL, and color configured by admins</td>
+            </tr>
+            <tr>
+              <td>Language preference</td>
+              <td>Display bot messages in the chosen language</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Data We Do NOT Collect</h3>
+      <ul>
+        <li><strong>No personal user data</strong> — We do not store usernames, user IDs, email addresses, IP addresses, or any personally identifiable information.</li>
+        <li><strong>No message content</strong> — The Bot reads message content only to detect commands (messages starting with <code>!</code>). Messages are not stored or logged.</li>
+        <li><strong>No usage analytics</strong> — We do not track how often users interact with the Bot.</li>
+        <li><strong>No data from minors</strong> — We do not knowingly collect data from anyone under the age of 13.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. How Data Is Used</h2>
+      <p>All stored data is used exclusively to provide the Bot's functionality:</p>
+      <ul>
+        <li>Assigning and removing roles when users react to the role panel.</li>
+        <li>Sending welcome messages when new members join a server.</li>
+        <li>Displaying bot responses in the server's configured language.</li>
+      </ul>
+      <p>Data is <strong>never</strong> used for advertising, marketing, selling to third parties, or profiling/tracking users.</p>
+    </section>
+
+    <section>
+      <h2>4. Data Storage and Security</h2>
+      <ul>
+        <li>Data is stored in a <strong>MongoDB Atlas</strong> cloud database.</li>
+        <li>Access to the database is restricted to the Bot's application only.</li>
+        <li>We use industry-standard security practices provided by MongoDB Atlas (encryption at rest, encryption in transit, access controls).</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>5. Data Retention</h2>
+      <p>Configuration data is retained as long as the Bot remains in the server. When the Bot is removed from a server, administrators can request deletion of all associated data.</p>
+    </section>
+
+    <section>
+      <h2>6. Data Deletion</h2>
+      <p>Server administrators can:</p>
+      <ul>
+        <li>Use <code>!welcome reset</code> to delete all welcome configuration for their server.</li>
+        <li>Use <code>!unlink &lt;emoji&gt;</code> to remove specific role bindings.</li>
+        <li>Contact us to request complete deletion of all data associated with their server.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>7. Third-Party Services</h2>
+      <p>The Bot interacts with:</p>
+      <ul>
+        <li><strong>Discord API</strong> — To receive commands and perform actions. Subject to <a href="https://discord.com/privacy" target="_blank" rel="noopener">Discord's Privacy Policy</a>.</li>
+        <li><strong>MongoDB Atlas</strong> — To store configuration data. Subject to <a href="https://www.mongodb.com/legal/privacy-policy" target="_blank" rel="noopener">MongoDB's Privacy Policy</a>.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>8. Children's Privacy</h2>
+      <p>The Bot does not knowingly collect any personal information from children under the age of 13. Since the Bot does not collect personal user data, there is no risk of storing children's information.</p>
+    </section>
+
+    <section>
+      <h2>9. Changes to This Policy</h2>
+      <p>We may update this Privacy Policy at any time. Changes will be reflected in the "Last updated" date at the top of this document.</p>
+    </section>
+
+    <section>
+      <h2>10. Contact</h2>
+      <p>If you have questions about this Privacy Policy or want to request data deletion, you can reach us at:</p>
+      <div class="contact-card">
+        <span>Discord:</span> <strong>Shica</strong>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>BotHada &mdash; Discord Server Configuration Bot</p>
+  </footer>
+</body>
+</html>
