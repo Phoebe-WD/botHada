@@ -16,7 +16,7 @@ const event: BotEvent = {
     if (!channel || !channel.isTextBased()) return;
 
     let text = config.message || await t(gid, 'welcome.default_message');
-    const color = config.color || '#ffcc00';
+    const color = config.color || '#91C4F2';
 
     text = text.replace(/{user}/g, `<@${member.id}>`);
 

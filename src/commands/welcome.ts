@@ -50,7 +50,7 @@ async function handleView(gid: string, config: WelcomeData, reply: Reply) {
   const notSet = await t(gid, 'welcome.view_not_set');
   const channel = config.channel ? `<#${config.channel}>` : notSet;
   const msg = config.message || await t(gid, 'welcome.view_default_message');
-  const color = config.color || '#ffcc00';
+  const color = config.color || '#91C4F2';
   const image = config.image || notSet;
 
   const embed = new EmbedBuilder()

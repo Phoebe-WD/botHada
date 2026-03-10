@@ -4,7 +4,7 @@ import { BotCommand } from '../types';
 
 async function buildEmbed(gid: string, avatarURL: string) {
   return new EmbedBuilder()
-    .setColor('#00b0f4')
+    .setColor('#8CA0D7')
     .setTitle(await t(gid, 'help.title'))
     .setDescription(await t(gid, 'help.description'))
     .addFields(
