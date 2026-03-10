@@ -1,0 +1,62 @@
+{
+    "common": {
+        "no_permissions": "❌ You don't have administrator permissions.",
+        "error": "❌ There was an error executing that command."
+    },
+    "setup": {
+        "success": "✅ Setup complete: Roles and channels created successfully."
+    },
+    "link": {
+        "usage": "⚠️ Correct usage: `!link <emoji> <@role>`\nExample: `!link 🔴 @reventHADAS`",
+        "success": "✅ Done! Linked emoji {emoji} to role **{role}**."
+    },
+    "unlink": {
+        "usage": "⚠️ Correct usage: `!unlink <emoji>`",
+        "not_found": "❌ That emoji is not linked to any role.",
+        "success": "🗑️ Emoji {emoji} has been unlinked successfully."
+    },
+    "panel": {
+        "no_roles": "⚠️ No roles linked. Use `!link <emoji> <@role>` first.",
+        "header": "🎭 **Pick your side! React to this message to get your role:**\n\n"
+    },
+    "welcome": {
+        "subcommand_required": "⚠️ Subcommand required: {options}\nExample: `!welcome channel #general`",
+        "channel_usage": "⚠️ You must mention a channel. Example: `!welcome channel #general`",
+        "channel_success": "✅ Welcome messages will now be sent in {channel}.",
+        "message_usage": "⚠️ Write a message. Use `{user}` where you want to mention the user.\nExample: `!welcome message Hey {user}, pick your side in #roles!`",
+        "message_success": "✅ Welcome message updated.",
+        "image_usage": "⚠️ You must provide a valid URL.\nExample: `!welcome image https://example.com/banner.gif`",
+        "image_success": "✅ Welcome banner set successfully.",
+        "color_usage": "⚠️ Invalid HEX code.\nExample: `!welcome color #ff0000`",
+        "color_success": "✅ Welcome color updated to **{color}**.",
+        "test_no_channel": "⚠️ No channel configured. Use `!welcome channel #channel` first.",
+        "test_success": "✅ Simulating new member entry... Check the welcome channel.",
+        "view_title": "⚙️ Welcome Configuration",
+        "view_field_channel": "Channel",
+        "view_field_color": "Color",
+        "view_field_message": "Message",
+        "view_field_image": "Image/Banner",
+        "view_not_set": "*Not set*",
+        "view_default_message": "*Default:* Welcome to the server, {user}!",
+        "reset_success": "🗑️ Welcome configuration has been reset.",
+        "embed_title": "🎉 A new member has arrived!",
+        "default_message": "Welcome to the server, {user}!",
+        "greeting": "Hey <@{userId}>!"
+    },
+    "help": {
+        "title": "📚 Bot Help Panel",
+        "description": "Here's the list of available commands. *Note: All commands require Administrator permissions.*",
+        "general_title": "🛠️ General Setup",
+        "general_value": "`!setup` ➔ Automatically creates base roles and voice channels.\n`!help` or `!info` ➔ Shows this help panel.\n`!language <es/en>` ➔ Change the bot's language.",
+        "roles_title": "🎭 Reaction Roles System",
+        "roles_value": "`!link <emoji> <@role>` ➔ Saves which emoji gives which role.\n`!unlink <emoji>` ➔ Removes an emoji from the database.\n`!panel` ➔ Generates the interactive role selection message.",
+        "welcome_title": "👋 Welcome System",
+        "welcome_value": "`!welcome channel <#channel>` ➔ Set the welcome channel.\n`!welcome message <text>` ➔ Change the text (`{user}` to mention).\n`!welcome image <URL>` ➔ Add a banner.\n`!welcome color <#HEX>` ➔ Change the embed color.\n`!welcome view` ➔ Show current configuration.\n`!welcome test` ➔ Simulate a member entry.\n`!welcome reset` ➔ Clear all welcome configuration.",
+        "footer": "For any questions contact Shica"
+    },
+    "language": {
+        "usage": "⚠️ Correct usage: `!language <es/en>`",
+        "invalid": "⚠️ Unsupported language. Options: `es` (Español), `en` (English).",
+        "success": "✅ Bot language changed to **English**."
+    }
+}
