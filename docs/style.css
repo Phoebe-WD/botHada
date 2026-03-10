@@ -33,7 +33,28 @@
   font-size: 1.15rem;
   color: var(--text-muted);
   max-width: 500px;
-  margin: 0 auto 3rem;
+  margin: 0 auto 2rem;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: linear-gradient(135deg, #5865F2, var(--amethyst));
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.05rem;
+  padding: 0.85rem 2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(88, 101, 242, 0.35);
+  color: #fff;
+  text-decoration: none;
 }
 
 /* ==========================================
