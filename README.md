@@ -5,12 +5,12 @@ Discord bot for server configuration. Reaction roles, welcome system, and per-se
 ## Stack
 
 - TypeScript with discord.js v14
-- MongoDB with Mongoose
+- MongoDB with Mongoose 9
 - i18n (Spanish / English)
 
 ## Requirements
 
-- Node.js v20+
+- Node.js v24+
 - MongoDB Atlas account (or local MongoDB)
 - Discord bot with intents: Guilds, Guild Messages, Message Content, Guild Members, Guild Message Reactions
 

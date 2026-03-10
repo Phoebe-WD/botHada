@@ -17,7 +17,7 @@ src/
   types.ts                  → Shared interfaces (BotCommand, BotEvent, data types)
   utils/
     database.ts             → MongoDB connection (connectDB)
-    config.ts               → Data access layer (loadRoles, saveRole, loadWelcome, etc.)
+    config.ts               → Data access layer (loadRoles, findRoleByEmoji, saveRole, loadWelcome, etc.)
     i18n.ts                 → t(guildId, key, vars) async translation function
   models/                   → Mongoose schemas
     RoleBinding.ts          → emoji-to-role mappings per guild
