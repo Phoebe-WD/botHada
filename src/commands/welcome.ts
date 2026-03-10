@@ -61,10 +61,10 @@ const subcommands: Record<string, SubcommandFn> = {
       .setColor(color as ColorResolvable)
       .setTitle(await t(gid, 'welcome.view_title'))
       .addFields(
-        { name: 'Channel', value: channel, inline: true },
-        { name: 'Color', value: color, inline: true },
-        { name: 'Message', value: msg },
-        { name: 'Image/Banner', value: image },
+        { name: await t(gid, 'welcome.view_field_channel'), value: channel, inline: true },
+        { name: await t(gid, 'welcome.view_field_color'), value: color, inline: true },
+        { name: await t(gid, 'welcome.view_field_message'), value: msg },
+        { name: await t(gid, 'welcome.view_field_image'), value: image },
       );
 
     return message.reply({ embeds: [embed] });
