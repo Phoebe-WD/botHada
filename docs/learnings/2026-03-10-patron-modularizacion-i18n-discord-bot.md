@@ -46,4 +46,4 @@ Este patron aplica a cualquier bot de Discord basado en discord.js v14 que neces
 - Soportar multiples idiomas por servidor
 - Mantener una base de codigo tipada con TypeScript
 
-La estructura final es: `src/` con commands/, events/, utils/, types.ts → compila a `dist/`. Datos en `data/`, traducciones en `locales/`.
+La estructura final es: `src/` con commands/, events/, utils/, types.ts → compila a `dist/`. Datos en MongoDB, traducciones en `locales/`.
