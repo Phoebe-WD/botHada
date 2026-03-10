@@ -7,17 +7,18 @@
         "success": "✅ Configuración completada: Roles y canales creados correctamente."
     },
     "link": {
-        "usage": "⚠️ Uso correcto: `!link <emoji> <@rol>`\nEjemplo: `!link 🔴 @reventHADAS`",
+        "usage": "⚠️ Uso correcto: `/link <emoji> <@rol>` o `!link <emoji> <@rol>`\nEjemplo: `!link 🔴 @reventHADAS`",
         "success": "✅ ¡Listo! He vinculado el emoji {emoji} con el rol **{role}**."
     },
     "unlink": {
-        "usage": "⚠️ Uso correcto: `!unlink <emoji>`",
+        "usage": "⚠️ Uso correcto: `/unlink <emoji>` o `!unlink <emoji>`",
         "not_found": "❌ Ese emoji no está vinculado a ningún rol actualmente.",
         "success": "🗑️ El emoji {emoji} ha sido desvinculado correctamente."
     },
     "panel": {
-        "no_roles": "⚠️ No hay roles vinculados. Usa `!link <emoji> <@rol>` primero.",
-        "header": "🎭 **¡Elige tu bando! Reacciona a este mensaje para obtener tu rol:**\n\n"
+        "no_roles": "⚠️ No hay roles vinculados. Usa `/link` o `!link <emoji> <@rol>` primero.",
+        "header": "🎭 **¡Elige tu bando! Reacciona a este mensaje para obtener tu rol:**\n\n",
+        "created": "✅ Panel de roles creado."
     },
     "welcome": {
         "subcommand_required": "⚠️ Subcomando requerido: {options}\nEjemplo: `!welcome channel #general`",
@@ -29,7 +30,7 @@
         "image_success": "✅ Banner de bienvenida configurado correctamente.",
         "color_usage": "⚠️ Código HEX inválido.\nEjemplo: `!welcome color #ff0000`",
         "color_success": "✅ Color de bienvenida actualizado a **{color}**.",
-        "test_no_channel": "⚠️ No hay canal configurado. Usa `!welcome channel #canal` primero.",
+        "test_no_channel": "⚠️ No hay canal configurado. Usa `/welcome channel` o `!welcome channel #canal` primero.",
         "test_success": "✅ Simulando entrada de nuevo miembro... Revisa el canal de bienvenidas.",
         "view_title": "⚙️ Configuración de Bienvenida",
         "view_field_channel": "Canal",
@@ -45,17 +46,17 @@
     },
     "help": {
         "title": "📚 Panel de Ayuda del Bot",
-        "description": "Aquí tienes la lista de comandos disponibles. *Nota: Todos los comandos requieren permisos de Administrador.*",
+        "description": "Aquí tienes la lista de comandos disponibles. Puedes usar tanto `/comando` como `!comando`.\n*Nota: Todos los comandos requieren permisos de Administrador (excepto /help).*",
         "general_title": "🛠️ Configuración General",
-        "general_value": "`!setup` ➔ Crea automáticamente los roles base y canales de voz.\n`!help` o `!info` ➔ Muestra este panel de información.\n`!language <es/en>` ➔ Cambia el idioma del bot.",
+        "general_value": "`/setup` ➔ Crea automáticamente los roles base y canales de voz.\n`/help` ➔ Muestra este panel de información.\n`/language <es/en>` ➔ Cambia el idioma del bot.",
         "roles_title": "🎭 Sistema de Roles por Reacción",
-        "roles_value": "`!link <emoji> <@rol>` ➔ Guarda qué emoji dará qué rol.\n`!unlink <emoji>` ➔ Borra un emoji de la base de datos.\n`!panel` ➔ Genera el mensaje interactivo para elegir rol.",
+        "roles_value": "`/link <emoji> <@rol>` ➔ Guarda qué emoji dará qué rol.\n`/unlink <emoji>` ➔ Borra un emoji de la base de datos.\n`/panel` ➔ Genera el mensaje interactivo para elegir rol.",
         "welcome_title": "👋 Sistema de Bienvenidas",
-        "welcome_value": "`!welcome channel <#canal>` ➔ Define el canal de saludos.\n`!welcome message <texto>` ➔ Cambia el texto (`{user}` para mencionar).\n`!welcome image <URL>` ➔ Añade un banner.\n`!welcome color <#HEX>` ➔ Cambia el color del marco.\n`!welcome view` ➔ Muestra la configuración actual.\n`!welcome test` ➔ Simula una entrada de miembro.\n`!welcome reset` ➔ Limpia toda la configuración.",
+        "welcome_value": "`/welcome channel <#canal>` ➔ Define el canal de saludos.\n`/welcome message <texto>` ➔ Cambia el texto (`{user}` para mencionar).\n`/welcome image <URL>` ➔ Añade un banner.\n`/welcome color <#HEX>` ➔ Cambia el color del marco.\n`/welcome view` ➔ Muestra la configuración actual.\n`/welcome test` ➔ Simula una entrada de miembro.\n`/welcome reset` ➔ Limpia toda la configuración.",
         "footer": "Cualquier cosa comunicarse con Shica"
     },
     "language": {
-        "usage": "⚠️ Uso correcto: `!language <es/en>`",
+        "usage": "⚠️ Uso correcto: `/language <es/en>` o `!language <es/en>`",
         "invalid": "⚠️ Idioma no soportado. Opciones: `es` (Español), `en` (English).",
         "success": "✅ Idioma del bot cambiado a **Español**."
     }

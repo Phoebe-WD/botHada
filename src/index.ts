@@ -48,7 +48,31 @@ for (const file of eventFiles) {
 }
 
 // ==========================================
-// MESSAGE HANDLER (COMMANDS)
+// SLASH COMMAND HANDLER
+// ==========================================
+client.on('interactionCreate', async (interaction) => {
+  if (!interaction.isChatInputCommand()) return;
+
+  const command = commands.get(interaction.commandName);
+  if (!command) return;
+
+  try {
+    await command.execute(interaction, client);
+  } catch (error) {
+    console.error(`Error executing /${interaction.commandName}:`, error);
+    const errorMsg = interaction.guild
+      ? await t(interaction.guild.id, 'common.error')
+      : 'An error occurred.';
+    if (interaction.replied || interaction.deferred) {
+      await interaction.followUp({ content: errorMsg, ephemeral: true }).catch(console.error);
+    } else {
+      await interaction.reply({ content: errorMsg, ephemeral: true }).catch(console.error);
+    }
+  }
+});
+
+// ==========================================
+// PREFIX COMMAND HANDLER
 // ==========================================
 client.on('messageCreate', async (message) => {
   if (message.author.bot) return;
@@ -63,9 +87,9 @@ client.on('messageCreate', async (message) => {
   if (!command) return;
 
   try {
-    await command.execute(message, args, client);
+    await command.executePrefix(message, args, client);
   } catch (error) {
-    console.error(`Error executing command ${commandName}:`, error);
+    console.error(`Error executing !${commandName}:`, error);
     message.reply(await t(message.guild.id, 'common.error')).catch(console.error);
   }
 });
