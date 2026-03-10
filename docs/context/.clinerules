@@ -1,0 +1,45 @@
+# Discord Bot Development Rules & Context
+
+This document defines the architectural standards, naming conventions, and best practices for this Discord Bot project.
+
+## 🏛️ Architecture & SOLID Principles
+
+- **Single Responsibility (SRP)**: Each class/function must have one reason to change. Separate Command logic from Event handling and Persistence.
+- **Dependency Inversion (DIP)**: High-level modules should not depend on low-level modules. Use interfaces for Services and Repositories.
+- **Command Pattern**: Every Discord command must be its own class or standalone object with a `execute` method.
+- **Event-Driven**: Use a dedicated `EventHandler` to register and manage Discord events.
+
+## 📂 Folder Structure
+
+```text
+src/
+├── client/           # Custom Discord Client (BotClient.ts)
+├── commands/         # Command definitions (SlashCommands)
+│   ├── admin/
+│   └── general/
+├── events/           # Event listeners (ready.ts, messageCreate.ts)
+├── services/         # Business logic & persistence (ConfigService.ts)
+├── types/            # Strict TypeScript interfaces & types
+├── utils/            # Shared helper functions
+└── index.ts          # Entry point
+```
+
+## ⌨️ Naming Conventions
+
+- **Files**: PascalCase for Classes (`BotClient.ts`), camelCase for utility files or functions.
+- **Variables/Functions**: camelCase (`interactionCreate`, `reloadCommands`).
+- **Interfaces/Types**: PascalCase, prefixed with `I` for interfaces if preferred, but descriptive names are prioritized (`CommandOptions`, `BotConfig`).
+- **Constants**: UPPER_SNAKE_CASE (`MAX_RETRY_ATTEMPTS`).
+
+## 🛡️ Strict Typing & Best Practices
+
+- **Zero `any` Policy**: The use of `any` is strictly forbidden. Use `unknown` with type guards or specific interfaces.
+- **Strict Null Checks**: Always handle `null` or `undefined` returns from Discord API.
+- **Error Handling**: Every command must be wrapped in a `try-catch` block with centralized logging.
+- **Discord.js v14+**: Use modern Slash Commands and `GatewayIntentBits`.
+- **Environment Variables**: Never hardcode secrets. Use `process.env` via a validated config object.
+
+## 📝 Configuration Validation
+
+- Use `zod` for strictly validating configuration files (JSON/YAML) and environment variables at runtime.
+- Define a schema for `rolesConfig.json` to ensure the bot never works with malformed data.
