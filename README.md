@@ -2,6 +2,12 @@
 
 Discord bot for server configuration. Reaction roles, welcome system, and per-server language support.
 
+<!-- DOCS-IGNORE:start -->
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
+<!-- DOCS-IGNORE:end -->
+
 ## Stack
 
 - TypeScript with discord.js v14
@@ -53,3 +59,19 @@ All commands require Administrator permissions.
 ## License
 
 ISC
+
+## Contributors ⭐
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/Phoebe-WD"><img src="https://avatars.githubusercontent.com/u/68600680?v=4" width="100px;" alt=""/><br /><sub><b>Phoebe Sttefi Wilckens Díaz</b></sub></a><br />💻 📖</td>
+  </tr>
+</table>
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+<!-- DOCS-IGNORE:end -->
