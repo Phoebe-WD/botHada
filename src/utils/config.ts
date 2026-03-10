@@ -16,6 +16,11 @@ export async function loadRoles(guildId: string): Promise<RolesData> {
   return roles;
 }
 
+export async function findRoleByEmoji(guildId: string, emoji: string): Promise<string | null> {
+  const binding = await RoleBinding.findOne({ guildId, emoji });
+  return binding?.roleId || null;
+}
+
 export async function saveRole(guildId: string, emoji: string, roleId: string): Promise<void> {
   await RoleBinding.findOneAndUpdate(
     { guildId, emoji },

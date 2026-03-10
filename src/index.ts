@@ -52,6 +52,7 @@ for (const file of eventFiles) {
 // ==========================================
 client.on('messageCreate', async (message) => {
   if (message.author.bot) return;
+  if (!message.guild) return;
   if (!message.content.startsWith('!')) return;
 
   const args = message.content.slice(1).trim().split(/ +/);
@@ -65,7 +66,7 @@ client.on('messageCreate', async (message) => {
     await command.execute(message, args, client);
   } catch (error) {
     console.error(`Error executing command ${commandName}:`, error);
-    message.reply(await t(message.guild!.id, 'common.error')).catch(console.error);
+    message.reply(await t(message.guild.id, 'common.error')).catch(console.error);
   }
 });
 
@@ -78,6 +79,9 @@ client.once('ready', () => {
 // START: Connect to DB, then login
 // ==========================================
 async function start() {
+  if (!process.env.DISCORD_TOKEN) {
+    throw new Error('DISCORD_TOKEN is not defined in .env');
+  }
   await connectDB();
   await client.login(process.env.DISCORD_TOKEN);
 }

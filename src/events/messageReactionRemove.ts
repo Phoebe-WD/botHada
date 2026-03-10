@@ -1,5 +1,5 @@
 import { MessageReaction, User } from 'discord.js';
-import { loadRoles } from '../utils/config';
+import { findRoleByEmoji } from '../utils/config';
 import { BotEvent } from '../types';
 
 const event: BotEvent = {
@@ -15,9 +15,8 @@ const event: BotEvent = {
     const guildId = reaction.message.guild?.id;
     if (!guildId) return;
 
-    const roles = await loadRoles(guildId);
     const emoji = reaction.emoji.toString();
-    const roleId = roles[emoji];
+    const roleId = await findRoleByEmoji(guildId, emoji);
 
     if (!roleId) return;
 
