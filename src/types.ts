@@ -1,9 +1,13 @@
-import { Client, Message } from 'discord.js';
+import { ChatInputCommandInteraction, Client, Message, SlashCommandBuilder, SlashCommandSubcommandsOnlyBuilder, SlashCommandOptionsOnlyBuilder } from 'discord.js';
+
+export type SlashCommandData = SlashCommandBuilder | SlashCommandSubcommandsOnlyBuilder | SlashCommandOptionsOnlyBuilder;
 
 export interface BotCommand {
   name: string;
   aliases?: string[];
-  execute(message: Message, args: string[], client: Client): Promise<unknown>;
+  data: SlashCommandData;
+  execute(interaction: ChatInputCommandInteraction, client: Client): Promise<unknown>;
+  executePrefix(message: Message, args: string[], client: Client): Promise<unknown>;
 }
 
 export interface BotEvent {
