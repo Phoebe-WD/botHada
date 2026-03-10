@@ -1,4 +1,4 @@
-# bot-config-dc
+# BotHada
 
 Discord bot for server configuration: reaction roles and welcome system.
 

@@ -1,48 +1,55 @@
-# bot-config-dc
+# BotHada
 
-Bot de Discord para configuracion automatica de servidores. Permite crear roles, canales de voz, asignar roles por reaccion y dar la bienvenida a nuevos miembros.
+Discord bot for server configuration. Reaction roles, welcome system, and per-server language support.
 
-## Requisitos
+## Stack
 
-- Node.js v18+
-- Un bot de Discord con los siguientes intents habilitados:
-  - Guilds
-  - Guild Messages
-  - Message Content
-  - Guild Members
-  - Guild Message Reactions
+- TypeScript with discord.js v14
+- MongoDB with Mongoose
+- i18n (Spanish / English)
 
-## Instalacion
+## Requirements
+
+- Node.js v20+
+- MongoDB Atlas account (or local MongoDB)
+- Discord bot with intents: Guilds, Guild Messages, Message Content, Guild Members, Guild Message Reactions
+
+## Setup
 
 ```bash
 npm install
+cp .env.example .env
+# Fill in DISCORD_TOKEN and MONGODB_URI in .env
+npm run build
+npm start
 ```
 
-Crear un archivo `.env` en la raiz del proyecto:
-
-```
-DISCORD_TOKEN=tu_token_aqui
-```
-
-## Uso
+### Development
 
 ```bash
-node index.js
+npm run dev    # Run with ts-node (no build needed)
 ```
 
-## Comandos
+## Commands
 
-| Comando | Descripcion |
+All commands require Administrator permissions.
+
+| Command | Description |
 |---------|-------------|
-| `!configurar` | Crea roles y canales de voz predefinidos |
-| `!vincular <emoji> <@rol>` | Vincula un emoji a un rol |
-| `!desvincular <emoji>` | Elimina la vinculacion |
-| `!panel` | Genera el panel de seleccion de roles |
-| `!setbienvenida <#canal>` | Define el canal de bienvenidas |
-| `!setmensaje <texto>` | Configura el mensaje de bienvenida |
-| `!setimagen <URL>` | Agrega un banner de bienvenida |
-| `!setcolor <#HEX>` | Cambia el color del embed |
-| `!testbienvenida` | Simula la entrada de un nuevo miembro |
-| `!help` | Muestra el panel de ayuda |
+| `!setup` | Create predefined roles and voice channels |
+| `!link <emoji> <@role>` | Link an emoji to a role |
+| `!unlink <emoji>` | Remove an emoji-role link |
+| `!panel` | Generate the reaction role selection panel |
+| `!welcome channel <#channel>` | Set the welcome channel |
+| `!welcome message <text>` | Set welcome message (`{user}` to mention) |
+| `!welcome image <URL>` | Set welcome banner |
+| `!welcome color <#HEX>` | Set welcome embed color |
+| `!welcome view` | Show current welcome configuration |
+| `!welcome test` | Simulate a new member entry |
+| `!welcome reset` | Clear all welcome configuration |
+| `!language <es/en>` | Change bot language per server |
+| `!help` | Show the help panel |
 
-> Todos los comandos requieren permisos de Administrador.
+## License
+
+ISC
