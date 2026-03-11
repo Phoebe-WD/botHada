@@ -12,6 +12,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Slash command registration script
 - Discord invite button on the landing page
 - Brand palette colors for embed defaults
+- CHANGELOG.md file
 
 ### Changed
 - Updated locale strings to reference slash commands
