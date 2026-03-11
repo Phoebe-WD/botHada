@@ -38,23 +38,23 @@ npm run dev    # Run with ts-node (no build needed)
 
 ## Commands
 
-All commands require Administrator permissions.
+All commands require Administrator permissions. Use `/command` (slash) or `!command` (prefix).
 
 | Command | Description |
 |---------|-------------|
-| `!setup` | Create predefined roles and voice channels |
-| `!link <emoji> <@role>` | Link an emoji to a role |
-| `!unlink <emoji>` | Remove an emoji-role link |
-| `!panel` | Generate the reaction role selection panel |
-| `!welcome channel <#channel>` | Set the welcome channel |
-| `!welcome message <text>` | Set welcome message (`{user}` to mention) |
-| `!welcome image <URL>` | Set welcome banner |
-| `!welcome color <#HEX>` | Set welcome embed color |
-| `!welcome view` | Show current welcome configuration |
-| `!welcome test` | Simulate a new member entry |
-| `!welcome reset` | Clear all welcome configuration |
-| `!language <es/en>` | Change bot language per server |
-| `!help` | Show the help panel |
+| `/setup` | Create predefined roles and voice channels |
+| `/link <emoji> <@role>` | Link an emoji to a role |
+| `/unlink <emoji>` | Remove an emoji-role link |
+| `/panel` | Generate the reaction role selection panel |
+| `/welcome channel <#channel>` | Set the welcome channel |
+| `/welcome message <text>` | Set welcome message (`{user}` to mention) |
+| `/welcome image <URL>` | Set welcome banner |
+| `/welcome color <#HEX>` | Set welcome embed color |
+| `/welcome view` | Show current welcome configuration |
+| `/welcome test` | Simulate a new member entry |
+| `/welcome reset` | Clear all welcome configuration |
+| `/language <es/en>` | Change bot language per server |
+| `/help` | Show the help panel |
 
 ## License
 
