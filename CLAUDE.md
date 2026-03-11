@@ -38,6 +38,15 @@ src/
 locales/                    → Translation files
   es.json                   → Spanish translations
   en.json                   → English translations
+docs/                       → Landing page and legal pages
+  index.html                → Main landing page
+  style.css                 → Landing page styles
+  i18n.js                   → Client-side i18n for landing page (ES/EN)
+  legal/
+    terms-of-service.html   → Terms of Service
+    privacy-policy.html     → Privacy Policy
+    style.css               → Shared legal pages styles
+    i18n-legal.js           → Client-side i18n for legal pages (ES/EN)
 dist/                       → Compiled JS output (gitignored)
 .env                        → Secrets (do not commit)
 .env.example                → Template for .env
@@ -95,25 +104,25 @@ All user-facing text must go through the translation system:
 - `t()` is async (it reads guild language from MongoDB)
 - Add new keys to both `locales/es.json` and `locales/en.json`
 - Default language is `es` (Spanish)
-- Guilds can switch with `!language es/en`
+- Guilds can switch with `/language es/en` or `!language es/en`
 
 ## Bot commands
 
-All require administrator permissions in Discord:
+All require administrator permissions in Discord. Use `/command` (slash) or `!command` (prefix).
 
-- `!setup` - Create predefined roles and voice channels
-- `!link <emoji> <@role>` - Link emoji to role
-- `!unlink <emoji>` - Remove emoji-role link
-- `!panel` - Generate reaction role selection message
-- `!welcome channel <#channel>` - Set welcome channel
-- `!welcome message <text>` - Set welcome message ({user} to mention)
-- `!welcome image <URL>` - Set welcome banner
-- `!welcome color <#HEX>` - Set welcome embed color
-- `!welcome view` - Show current welcome configuration
-- `!welcome test` - Simulate member entry
-- `!welcome reset` - Clear all welcome configuration
-- `!help` / `!info` - Help panel
-- `!language <es/en>` / `!lang` - Change bot language per server
+- `/setup` - Create predefined roles and voice channels
+- `/link <emoji> <@role>` - Link emoji to role
+- `/unlink <emoji>` - Remove emoji-role link
+- `/panel` - Generate reaction role selection message
+- `/welcome channel <#channel>` - Set welcome channel
+- `/welcome message <text>` - Set welcome message ({user} to mention)
+- `/welcome image <URL>` - Set welcome banner
+- `/welcome color <#HEX>` - Set welcome embed color
+- `/welcome view` - Show current welcome configuration
+- `/welcome test` - Simulate member entry
+- `/welcome reset` - Clear all welcome configuration
+- `/help` / `/info` - Help panel
+- `/language <es/en>` / `/lang` - Change bot language per server
 
 ## Development
 
@@ -127,7 +136,7 @@ npm run dev       # Run with ts-node (development)
 
 ## Conventions
 
-- Command prefix: `!`
+- Dual command support: `/` (slash commands) and `!` (prefix)
 - **All code in English**: file names, function names, variable names, comments, type names
 - User-facing text NEVER hardcoded — always use `await t()` from `utils/i18n.ts`
 - All translations in `locales/es.json` and `locales/en.json`
@@ -137,3 +146,4 @@ npm run dev       # Run with ts-node (development)
 - All data functions are async (MongoDB)
 - Use TypeScript interfaces from `types.ts` for all exports (BotCommand, BotEvent)
 - Export commands and events as `export default`
+- **AGENTS.md must mirror CLAUDE.md** — whenever CLAUDE.md is updated, apply the same changes to AGENTS.md so both files stay in sync

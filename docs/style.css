@@ -58,6 +58,30 @@
 }
 
 /* ==========================================
+   LANGUAGE TOGGLE
+   ========================================== */
+
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.lang-toggle:hover {
+  border-color: var(--amethyst-smoke);
+  color: var(--text);
+}
+
+/* ==========================================
    FEATURES
    ========================================== */
 

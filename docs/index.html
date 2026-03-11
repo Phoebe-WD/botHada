@@ -13,8 +13,12 @@
     <div class="nav-inner">
       <a href="index.html" class="logo">BotHada</a>
       <div class="nav-links">
-        <a href="legal/terms-of-service.html">Terms of Service</a>
-        <a href="legal/privacy-policy.html">Privacy Policy</a>
+        <a href="legal/terms-of-service.html" data-i18n="nav.terms">Terms of Service</a>
+        <a href="legal/privacy-policy.html" data-i18n="nav.privacy">Privacy Policy</a>
+        <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+          <i class="fa-solid fa-language"></i>
+          <span id="langLabel">ES</span>
+        </button>
       </div>
     </div>
   </nav>
@@ -22,81 +26,81 @@
   <div class="hero">
     <span class="hero-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
     <h1>BotHada</h1>
-    <p>A Discord bot for server configuration — reaction roles, welcome system, and per-server language support.</p>
+    <p data-i18n="hero.description">A Discord bot for server configuration — reaction roles, welcome system, and per-server language support.</p>
     <a href="https://discord.com/oauth2/authorize?client_id=1480739906593493012&permissions=8&integration_type=0&scope=bot" target="_blank" rel="noopener" class="cta-button">
-      <i class="fa-brands fa-discord"></i> Add to Discord
+      <i class="fa-brands fa-discord"></i> <span data-i18n="hero.cta">Add to Discord</span>
     </a>
   </div>
 
   <div class="features">
     <div class="feature-card">
       <span class="icon"><i class="fa-solid fa-masks-theater"></i></span>
-      <h3>Reaction Roles</h3>
-      <p>Let members pick their own roles by reacting to a panel with emojis.</p>
+      <h3 data-i18n="features.roles.title">Reaction Roles</h3>
+      <p data-i18n="features.roles.desc">Let members pick their own roles by reacting to a panel with emojis.</p>
     </div>
     <div class="feature-card">
       <span class="icon"><i class="fa-solid fa-hand-sparkles"></i></span>
-      <h3>Welcome System</h3>
-      <p>Greet new members with custom messages, banners, and embed colors.</p>
+      <h3 data-i18n="features.welcome.title">Welcome System</h3>
+      <p data-i18n="features.welcome.desc">Greet new members with custom messages, banners, and embed colors.</p>
     </div>
     <div class="feature-card">
       <span class="icon"><i class="fa-solid fa-language"></i></span>
-      <h3>Multi-language</h3>
-      <p>Switch between Spanish and English on a per-server basis.</p>
+      <h3 data-i18n="features.lang.title">Multi-language</h3>
+      <p data-i18n="features.lang.desc">Switch between Spanish and English on a per-server basis.</p>
     </div>
   </div>
 
   <div class="commands-section">
-    <h2>Commands</h2>
-    <p class="commands-note">All commands require <strong>Administrator</strong> permissions. Prefix: <code>!</code></p>
+    <h2 data-i18n="commands.title">Commands</h2>
+    <p class="commands-note" data-i18n-html="commands.note">All commands require <strong>Administrator</strong> permissions. Use <code>/command</code> (slash) or <code>!command</code> (prefix).</p>
 
     <div class="command-group">
-      <h3>Roles</h3>
+      <h3 data-i18n="commands.roles">Roles</h3>
       <div class="table-wrapper">
         <table>
           <thead>
-            <tr><th>Command</th><th>Description</th></tr>
+            <tr><th data-i18n="commands.thCommand">Command</th><th data-i18n="commands.thDesc">Description</th></tr>
           </thead>
           <tbody>
-            <tr><td><code>!setup</code></td><td>Create predefined roles and voice channels</td></tr>
-            <tr><td><code>!link &lt;emoji&gt; &lt;@role&gt;</code></td><td>Link an emoji to a role for the reaction panel</td></tr>
-            <tr><td><code>!unlink &lt;emoji&gt;</code></td><td>Remove an emoji-role link</td></tr>
-            <tr><td><code>!panel</code></td><td>Generate the reaction role selection panel</td></tr>
+            <tr><td><code>/setup</code></td><td data-i18n="cmd.setup">Create predefined roles and voice channels</td></tr>
+            <tr><td><code>/link &lt;emoji&gt; &lt;@role&gt;</code></td><td data-i18n="cmd.link">Link an emoji to a role for the reaction panel</td></tr>
+            <tr><td><code>/unlink &lt;emoji&gt;</code></td><td data-i18n="cmd.unlink">Remove an emoji-role link</td></tr>
+            <tr><td><code>/panel</code></td><td data-i18n="cmd.panel">Generate the reaction role selection panel</td></tr>
           </tbody>
         </table>
       </div>
     </div>
 
     <div class="command-group">
-      <h3>Welcome</h3>
+      <h3 data-i18n="commands.welcome">Welcome</h3>
       <div class="table-wrapper">
         <table>
           <thead>
-            <tr><th>Command</th><th>Description</th></tr>
+            <tr><th data-i18n="commands.thCommand">Command</th><th data-i18n="commands.thDesc">Description</th></tr>
           </thead>
           <tbody>
-            <tr><td><code>!welcome channel &lt;#channel&gt;</code></td><td>Set the welcome channel</td></tr>
-            <tr><td><code>!welcome message &lt;text&gt;</code></td><td>Set welcome message (<code>{user}</code> to mention)</td></tr>
-            <tr><td><code>!welcome image &lt;URL&gt;</code></td><td>Set welcome banner image</td></tr>
-            <tr><td><code>!welcome color &lt;#HEX&gt;</code></td><td>Set welcome embed color</td></tr>
-            <tr><td><code>!welcome view</code></td><td>Show current welcome configuration</td></tr>
-            <tr><td><code>!welcome test</code></td><td>Simulate a new member entry</td></tr>
-            <tr><td><code>!welcome reset</code></td><td>Clear all welcome configuration</td></tr>
+            <tr><td><code>/welcome channel &lt;#channel&gt;</code></td><td data-i18n="cmd.welcomeChannel">Set the welcome channel</td></tr>
+            <tr><td><code>/welcome message &lt;text&gt;</code></td><td data-i18n="cmd.welcomeMessage">Set welcome message (<code>{user}</code> to mention)</td></tr>
+            <tr><td><code>/welcome image &lt;URL&gt;</code></td><td data-i18n="cmd.welcomeImage">Set welcome banner image</td></tr>
+            <tr><td><code>/welcome color &lt;#HEX&gt;</code></td><td data-i18n="cmd.welcomeColor">Set welcome embed color</td></tr>
+            <tr><td><code>/welcome view</code></td><td data-i18n="cmd.welcomeView">Show current welcome configuration</td></tr>
+            <tr><td><code>/welcome test</code></td><td data-i18n="cmd.welcomeTest">Simulate a new member entry</td></tr>
+            <tr><td><code>/welcome reset</code></td><td data-i18n="cmd.welcomeReset">Clear all welcome configuration</td></tr>
           </tbody>
         </table>
       </div>
     </div>
 
     <div class="command-group">
-      <h3>General</h3>
+      <h3 data-i18n="commands.general">General</h3>
       <div class="table-wrapper">
         <table>
           <thead>
-            <tr><th>Command</th><th>Description</th></tr>
+            <tr><th data-i18n="commands.thCommand">Command</th><th data-i18n="commands.thDesc">Description</th></tr>
           </thead>
           <tbody>
-            <tr><td><code>!language &lt;es/en&gt;</code></td><td>Change bot language per server</td></tr>
-            <tr><td><code>!help</code></td><td>Show the help panel</td></tr>
+            <tr><td><code>/language &lt;es/en&gt;</code></td><td data-i18n="cmd.language">Change bot language per server</td></tr>
+            <tr><td><code>/help</code></td><td data-i18n="cmd.help">Show the help panel</td></tr>
           </tbody>
         </table>
       </div>
@@ -104,21 +108,23 @@
   </div>
 
   <div class="links-section">
-    <h2>Legal</h2>
+    <h2 data-i18n="legal.title">Legal</h2>
     <div class="link-cards">
       <a href="legal/terms-of-service.html" class="link-card">
         <span class="link-icon"><i class="fa-solid fa-file-contract"></i></span>
-        <span>Terms of Service</span>
+        <span data-i18n="nav.terms">Terms of Service</span>
       </a>
       <a href="legal/privacy-policy.html" class="link-card">
         <span class="link-icon"><i class="fa-solid fa-shield-halved"></i></span>
-        <span>Privacy Policy</span>
+        <span data-i18n="nav.privacy">Privacy Policy</span>
       </a>
     </div>
   </div>
 
   <footer>
-    <p>BotHada &mdash; Discord Server Configuration Bot</p>
+    <p data-i18n="footer">BotHada &mdash; Discord Server Configuration Bot</p>
   </footer>
+
+  <script src="i18n.js"></script>
 </body>
 </html>
